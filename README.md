@@ -18,6 +18,20 @@ Local-only practice lab inspired by Saarland's exercise format:
 - Patch guides: `docs/patch-guides/`
 - Safety policy: `docs/safety/AUP.md`
 
+## Week Map (1–10)
+| Week | Topic | Primary Route | Manifest |
+|---|---|---|---|
+| 01 | Baseline + Recon | `/` | `apps/social_app/challenges/weeks/week-01/manifest.md` |
+| 02 | XSS | `/` | `apps/social_app/challenges/weeks/week-02/manifest.md` |
+| 03 | CSP | `/csp-lab/` | `apps/social_app/challenges/weeks/week-03/manifest.md` |
+| 04 | Cross-Origin Communication | `/origin/receiver/` | `apps/social_app/challenges/weeks/week-04/manifest.md` |
+| 05 | Cross-Origin Attacks | `/attack-lab/` | `apps/social_app/challenges/weeks/week-05/manifest.md` |
+| 06 | Database Insecurity | `/db-lab/` | `apps/social_app/challenges/weeks/week-06/manifest.md` |
+| 07 | Server-Side Issues | `/server-lab/` | `apps/social_app/challenges/weeks/week-07/manifest.md` |
+| 08 | Infrastructure Security | `/infra-lab/` | `apps/social_app/challenges/weeks/week-08/manifest.md` |
+| 09 | Integrated Scenario | `/integrated-lab/` | `apps/social_app/challenges/weeks/week-09/manifest.md` |
+| 10 | Exam Preparation | `docs/start-here.md` | `apps/social_app/challenges/weeks/week-10/manifest.md` |
+
 ## Project Info
 - Last updated: 2026-03-25
 - Mode: local-only training lab (`localhost`)
