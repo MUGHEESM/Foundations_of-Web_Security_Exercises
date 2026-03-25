@@ -1,9 +1,27 @@
 # Foundations of Web Security — Personal Practice Lab
 
+[![Platform](https://img.shields.io/badge/Platform-Docker%20%2B%20Django-0db7ed)](https://www.docker.com/)
+[![Track](https://img.shields.io/badge/Track-Semester%20Simulation-blue)](docs/start-here.md)
+[![Status](https://img.shields.io/badge/Status-Ready%20for%20Practice-success)](docs/start-here.md)
+
+Personal practice repository inspired by Saarland University’s Foundations of Web Security exercise style.
+
 Local-only practice lab inspired by Saarland's exercise format:
 - Screecher-like track: offensive + defensive tasks on a vulnerable social app
 - Jeopardy track: standalone attack-only challenges
 - Checklist progression (no leaderboard)
+
+## Quick Links
+- Start here: `docs/start-here.md`
+- Semester checklist: `checklists/semester-checklist.md`
+- Weekly manifests: `apps/social_app/challenges/weeks/`
+- Patch guides: `docs/patch-guides/`
+- Safety policy: `docs/safety/AUP.md`
+
+## Project Info
+- Last updated: 2026-03-25
+- Mode: local-only training lab (`localhost`)
+- Focus: offensive + defensive web security practice
 
 ## Scope
 - Personal use only
@@ -20,9 +38,9 @@ Local-only practice lab inspired by Saarland's exercise format:
    ```powershell
    ./scripts/reset_week.ps1 -Week week-01
    ```
-3. Open app: <http://localhost:8000>
-4. Admin: <http://localhost:8000/admin>
-5. Follow the daily walkthrough: `docs/start-here.md`
+4. Open app: <http://localhost:8000>
+5. Admin: <http://localhost:8000/admin>
+6. Follow the daily walkthrough: `docs/start-here.md`
 
 ## Seeded Demo Accounts
 - `alice / alice12345`
