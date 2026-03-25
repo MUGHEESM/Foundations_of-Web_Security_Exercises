@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'nonce-staticnonce123'">
+</head>
+<body>
+  <script nonce="staticnonce123">
+    console.log('nonce reused across responses');
+  </script>
+</body>
+</html>

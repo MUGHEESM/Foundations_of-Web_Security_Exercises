@@ -1,0 +1,2 @@
+FLAG{week07_path_handling_placeholder}
+internal diagnostics only

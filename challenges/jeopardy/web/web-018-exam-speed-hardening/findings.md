@@ -1,0 +1,5 @@
+- Reflected XSS on search parameter
+- CORS origin reflection with credentials
+- SQL query interpolation with user input
+- Path traversal in file viewer
+- Debug diagnostics returns env values

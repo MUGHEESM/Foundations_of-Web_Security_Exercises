@@ -1,0 +1,8 @@
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: https://evil.example
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: Content-Type
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Content-Type: application/json
+
+{"session":"FLAG{week05_cors_credentials_placeholder}"}

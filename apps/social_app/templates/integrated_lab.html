@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Week 09 Integrated Scenario Lab</h1>
+<p>Chain multiple weaknesses across the platform and document impact.</p>
+
+<ol>
+  {% for item in chain %}
+    <li>
+      <p><strong>{{ item.step }}</strong></p>
+      <p>Target: <a href="{{ item.target }}">{{ item.target }}</a></p>
+      <p>Goal: {{ item.goal }}</p>
+    </li>
+  {% endfor %}
+</ol>
+
+<p>Final objective: produce one end-to-end narrative with exploit steps and layered mitigations.</p>
+{% endblock %}

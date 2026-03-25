@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Cross-Origin Receiver Lab</h1>
+<p>Open <a href="/origin/sender/" target="_blank">sender page</a> in another tab, then use postMessage.</p>
+
+<p>Trusted message value: <strong id="trustedValue">(none)</strong></p>
+
+<script>
+  window.addEventListener("message", (event) => {
+    const value = event.data?.value || "(missing)";
+    document.getElementById("trustedValue").innerHTML = value;
+  });
+</script>
+{% endblock %}

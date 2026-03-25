@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Server File Viewer Lab</h1>
+<p>File path handling is intentionally unsafe for this exercise.</p>
+
+<form method="get">
+  <label>File name</label>
+  <input name="name" value="{{ filename }}">
+  <button type="submit">Open</button>
+</form>
+
+<p>Resolved path:</p>
+<pre>{{ resolved }}</pre>
+
+{% if error %}
+<p>Error:</p>
+<pre>{{ error }}</pre>
+{% else %}
+<p>Content:</p>
+<pre>{{ content }}</pre>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,16 @@
+services:
+  social-app:
+    build:
+      context: ./apps/social_app
+    container_name: websec-social-app
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./.env
+    volumes:
+      - ./apps/social_app:/app
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py createsuperuser --noinput || true;
+             python manage.py seed_demo;
+             python manage.py runserver 0.0.0.0:8000"

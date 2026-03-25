@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Week 05 Attack Lab</h1>
+<p>This page intentionally includes weak CSRF/session handling patterns for practice.</p>
+
+<h3>Current Session State</h3>
+<ul>
+  <li>Email opt-in: {{ state.email_opt_in }}</li>
+  <li>Theme: {{ state.theme }}</li>
+  <li>Alerts: {{ state.alerts }}</li>
+</ul>
+
+<h3>State Change via GET (CSRF target)</h3>
+<p><a href="/account/email-optin/?value=1">Enable opt-in</a> | <a href="/account/email-optin/?value=0">Disable opt-in</a></p>
+
+<h3>Session Preferences API (CSRF + CORS target)</h3>
+<form method="post" action="/api/session-preferences/">
+  <label>Theme</label>
+  <input name="theme" value="dark">
+  <label>Alerts</label>
+  <input name="alerts" value="disabled">
+  <button type="submit">Update preferences</button>
+</form>
+{% endblock %}

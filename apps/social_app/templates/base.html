@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Screecher Practice</title>
+</head>
+<body>
+  <nav>
+    <a href="/">Feed</a>
+    {% if user.is_authenticated %}
+      <a href="/u/{{ user.username }}/">My Profile</a>
+      <a href="/notes/">Notes</a>
+      <a href="/csp-lab/">CSP Lab</a>
+      <a href="/origin/receiver/">Origin Lab</a>
+      <a href="/attack-lab/">Attack Lab</a>
+      <a href="/db-lab/">DB Lab</a>
+      <a href="/server-lab/">Server Lab</a>
+      <a href="/infra-lab/">Infra Lab</a>
+      <a href="/integrated-lab/">Integrated Lab</a>
+      <form method="post" action="/logout/" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+      </form>
+    {% else %}
+      <a href="/login/">Login</a>
+      <a href="/register/">Register</a>
+    {% endif %}
+  </nav>
+  <hr>
+  {% block content %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,2 @@
+FLAG{week01_reflected_xss_placeholder}
+FLAG{week01_idor_notes_placeholder}

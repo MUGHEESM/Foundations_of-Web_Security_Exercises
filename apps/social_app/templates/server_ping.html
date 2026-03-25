@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Server Ping Lab</h1>
+<p>Input is passed into a shell command for educational purposes.</p>
+
+<form method="get">
+  <label>Host</label>
+  <input name="host" value="{{ host }}">
+  <button type="submit">Run</button>
+</form>
+
+<p>Executed command:</p>
+<pre>{{ command }}</pre>
+
+<p>Output:</p>
+<pre>{{ output }}</pre>
+{% endblock %}

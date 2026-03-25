@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Profile: @{{ profile_user.username }}</h1>
+
+<h3>Posts</h3>
+{% for post in posts %}
+  <p>{{ post.created_at }} — {{ post.body }}</p>
+{% empty %}
+  <p>No posts yet.</p>
+{% endfor %}
+{% endblock %}

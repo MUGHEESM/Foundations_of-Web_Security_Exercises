@@ -1,0 +1,4 @@
+1) postMessage origin trust bypass
+2) CSRF state change on account endpoint
+3) unauthorized post export
+4) config diagnostics secret leak

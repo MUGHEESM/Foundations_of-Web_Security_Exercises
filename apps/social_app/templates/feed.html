@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Feed</h1>
+
+<form method="get">
+  <label>Search</label>
+  <input name="q" value="{{ query }}">
+  <button type="submit">Find</button>
+</form>
+
+{% if query %}
+  <p>Search results for: {{ query|safe }}</p>
+{% endif %}
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Post</button>
+</form>
+
+<hr>
+{% for post in posts %}
+  <article>
+    <p><strong><a href="/u/{{ post.author.username }}/">@{{ post.author.username }}</a></strong> — {{ post.created_at }}</p>
+    <p>{{ post.body }}</p>
+
+    <h4>Comments</h4>
+    {% for comment in post.comments.all %}
+      <p><strong>{{ comment.author.username }}</strong>: {{ comment.body|safe }}</p>
+    {% empty %}
+      <p>No comments yet.</p>
+    {% endfor %}
+
+    <form method="post" action="/post/{{ post.id }}/comment/">
+      {% csrf_token %}
+      {{ comment_form.as_p }}
+      <button type="submit">Comment</button>
+    </form>
+  </article>
+  <hr>
+{% empty %}
+  <p>No posts yet.</p>
+{% endfor %}
+{% endblock %}

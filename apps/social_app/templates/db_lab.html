@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Week 06 Database Insecurity Lab</h1>
+<p>This page intentionally uses unsafe query construction for practice.</p>
+
+<form method="get">
+  <label>Username search term</label>
+  <input name="term" value="{{ term }}">
+  <button type="submit">Search</button>
+</form>
+
+<p>Executed SQL:</p>
+<pre>{{ raw_sql }}</pre>
+
+<h3>Results</h3>
+<ul>
+  {% for user in users %}
+    <li>#{{ user.id }} {{ user.username }} — {{ user.password_hash }}</li>
+  {% empty %}
+    <li>No users found.</li>
+  {% endfor %}
+</ul>
+
+<p>Data export endpoint (authorization exercise):</p>
+<p><a href="/db-lab/post-export/?author={{ user.username }}">/db-lab/post-export/?author={{ user.username }}</a></p>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Cross-Origin Sender Lab</h1>
+<p>This page posts a message to the opener/parent with target origin <code>*</code>.</p>
+
+<button id="send">Send Message</button>
+
+<script>
+  const payload = "{{ payload|escapejs }}";
+  document.getElementById("send").addEventListener("click", () => {
+    const msg = { value: payload };
+    if (window.opener) {
+      window.opener.postMessage(msg, "*");
+      return;
+    }
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage(msg, "*");
+    }
+  });
+</script>
+{% endblock %}
